@@ -13,3 +13,8 @@ def f(r1,r2,u1,u2):
     if not isinstance (u2,str):
         raise ValueError("u2 doit être une chaine de caractère")  
 
+    conversion={"m\u2126":1e-3,"\u2126":1,"k\u2126":1e3}
+    if u1!="\u2126":
+        r1=r1*conversion[u1]
+    if u2!="\u2126":
+        r2=r2*conversion[u2]
