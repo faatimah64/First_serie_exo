@@ -18,3 +18,7 @@ def f(r1,r2,u1,u2):
         r1=r1*conversion[u1]
     if u2!="\u2126":
         r2=r2*conversion[u2]
+    Req_serie=(r1+r2)
+    Req_par=1/(1/r1+1/r2)
+    Result={"Rserie":Req_serie,"Rpar":round(Req_par,2)}
+    return Result
